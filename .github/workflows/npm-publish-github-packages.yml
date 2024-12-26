@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    tags:
+      - v*
+
 jobs:
   cache-and-install:
     runs-on: ubuntu-latest
