@@ -28,9 +28,6 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://npm.pkg.github.com'
 
-      - name: Configure .npmrc
-        run: echo "@rateme:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" > ~/.npmrc
-
       - name: Install dependencies
         run: pnpm install
 
